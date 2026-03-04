@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simulation Viewer</title>
+<style>
+body{
+    font-family: Klee;
+    text-align:center;
+    background:#f4f4f4;
+}
+
+button{
+    padding:12px 20px;
+    margin:10px;
+    font-size:18px;
+}
+
+video{
+    width:900px;
+    margin-top:20px;
+}
+</style>
+<script>
+function changeVideo(file){
+    document.getElementById("player").src=file
+}
+</script>
+</head>
+<body>
+<h2>Particle Tracking Simulation</h2>
+<p>Select simulation</p>
+<select onchange="changeVideo(this.value)">
+<option value="Aogashima_20110824.mp4">Aogashima 2011-08-24</option>
+<option value="Aogashima_20140716.mp4">Aogashima 2014-07-16</option>
+<option value="Aogashima_20170720.mp4">Aogashima 2017-07-20</option>
+<option value="Aogashima_20170801.mp4">Aogashima 2017-08-01</option>
+<option value="Bayonnaise_20110712.mp4">Bayonnaise 2011-07-12</option>
+<option value="Bayonnaise_20110913.mp4">Bayonnaise 2011-09-13</option>
+<option value="Kurose_20070820.mp4">Kurose 2007-08-20</option>
+<option value="Kurose_20170905.mp4">Kurose 2017-09-05</option>
+<option value="Mikurashima_20070910.mp4">Mikurashima 2007-09-10</option>
+<option value="Miyake_20070723.mp4">Miyake 2007-07-23</option>
+<option value="Oshima_20140822.mp4">Oshima 2014-08-22</option>
+<option value="Oshima_20140910.mp4">Oshima 2014-09-10</option>
+</select>
+<br>
+<video id="player" autoplay loop muted playsinline controls>
+<source src="Aogashima_20110824.mp4" type="video/mp4">
+</video>
+</body>
+</html>
